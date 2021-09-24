@@ -1,8 +1,21 @@
 # AutomationPractice
+automationpractice.com is an end-end e-commerce website. It covers the complete online shopping workflow.
+Tools:
 
-End-to-end test automation project using `Java`, `Selenium` and `TestNG`.
+• Selenium Web Driver
 
-Test case: Purchase a random product with random quantity, size and color successfully as a new user, creating a random new account.
+• Java
+
+• TestNG
+
+Tested functionalities:
+
+• Create new account form
+
+• Login form
+
+• Complete shopping workflow
+
 
 # Additional libraries
 Besides `Selenium` and `TestNG`, this project also uses additional libraries, such as:
