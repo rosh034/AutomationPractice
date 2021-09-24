@@ -40,6 +40,7 @@ Feature: Testing categories in store
     	And there should be 1 product in basket
 	
     	Scenario: Successful LogOut
+	Given User is on Home Page
 	When User LogOut from the Application
 	Then Message displayed LogOut Successfully
   
