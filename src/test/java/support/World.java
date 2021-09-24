@@ -65,9 +65,4 @@ public class World {
 		actions.moveToElement(element).click().build().perform();
 	}
 	
-//	public World(WebDriver driver) {
-//
-//		this.driver = driver;
-//	}
-
 }
