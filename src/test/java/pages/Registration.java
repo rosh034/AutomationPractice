@@ -108,35 +108,35 @@ public class Registration extends WebDriverCommonLib {
 	public static void create_Registration() {
 		try {
 
-			driver.findElement(By.id("email_create")).sendKeys("markstone@gmail.com");
+			driver.findElement(By.id("email_create")).sendKeys("testuser1@gmail.com");
 			driver.findElement(By.id("SubmitCreate")).click();
 			driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
 
 			driver.findElement(By.id("id_gender2")).click();
-			driver.findElement(By.id("customer_firstname")).sendKeys("Mark");
-			driver.findElement(By.id("customer_lastname")).sendKeys("Stone");
-			driver.findElement(By.id("passwd")).sendKeys("Galaxy@123");
+			driver.findElement(By.id("customer_firstname")).sendKeys("Test");
+			driver.findElement(By.id("customer_lastname")).sendKeys("User");
+			driver.findElement(By.id("passwd")).sendKeys("Test@123");
 
 			// select DOB
 			WebElement date = driver.findElement(By.id("days"));
 			Select oSelectDate = new Select(date);
-			oSelectDate.selectByValue("15");
+			oSelectDate.selectByValue("17");
 
 			// select month
 			WebElement month = driver.findElement(By.id("months"));
 			Select oSelectMonth = new Select(month);
-			oSelectMonth.selectByValue("6");
+			oSelectMonth.selectByValue("02");
 
 			// select year
 			WebElement year = driver.findElement(By.id("years"));
 			Select oSelectYears = new Select(year);
-			oSelectYears.selectByValue("1991");
+			oSelectYears.selectByValue("1992");
 
 			// create address
 
 			// driver.findElement(By.id("firstname")).sendKeys("Mark");
 			// driver.findElement(By.id("lastname")).sendKeys("Stone");
-			driver.findElement(By.id("address1")).sendKeys("Elv street");
+			driver.findElement(By.id("address1")).sendKeys("#123,Nagar");
 
 			driver.findElement(By.id("city")).sendKeys("Bangalore");
 
