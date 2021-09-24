@@ -1,4 +1,4 @@
-package automationpractice.com.pageObject;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -43,7 +43,7 @@ public class SignInForm {
 		password.sendKeys(pass);
 	}
 	
-	/****** ERRORS ******/
+
 	
 	public WebElement getEmailRequiredError() {
 		return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \"An email address required.\")]"), 30);
@@ -64,13 +64,5 @@ public class SignInForm {
 		return Utils.waitForElementPresence(driver, By.xpath("//li[contains(text(), \"Invalid password\")]"), 30);
 	}
 	
-	/****** HIGHLIGHTED ERRORS ******/
 	
-	public WebElement getEmailHighlightedRed() {
-		return Utils.waitForElementPresence(driver, By.xpath("//div[@class=\"form-group form-error\"]//input[@id=\"email\"]"), 30);
-	}
-	
-	public WebElement getEmailHighlightedGreen() {
-		return Utils.waitForElementPresence(driver, By.xpath("//div[@class=\"form-group form-ok\"]//input[@id=\"email\"]"), 30);
-	}
 }
