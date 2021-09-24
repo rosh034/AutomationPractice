@@ -75,13 +75,7 @@ public class CategoryStep {
 		assertEquals(true, isAdded);
 	}
 
-	@And("^continue shopping")
-	public void continueShopping() {
-		world.implicityWait(10, driver);
-		world.waitForElementToBeClickable(ProductUniversalPage.continueShoppingButtonXP, driver);
-		ProductUniversalPage.continueShoppingButtonXP.click();
-	}
-
+	
 	@And("^there should be (\\d+) products in basket$")
 	public void checkNumberOfProductsInBasket(int prodInBasketNumer) {
 		world.waitForElementToBeClickable(StoreMenu.quantityInBasketXP, driver);
