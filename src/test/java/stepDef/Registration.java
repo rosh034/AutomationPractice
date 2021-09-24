@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -14,7 +14,7 @@ public class Test_Steps {
 	public static WebDriver driver;
 	@Given("^User is on Home Page$")
 	public void user_is_on_Home_Page() throws Throwable {
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://automationpractice.com/index.php");
 		}
@@ -24,26 +24,28 @@ public class Test_Steps {
 		driver.findElement(By.xpath(".//*[text()='Sign in']")).click();
 		}
 
-	@When("^User enters UserName and Password$")
+	@When("^user fills \"Email address textbox\" with$")
 	public void user_enters_UserName_and_Password() throws Throwable {
-		driver.findElement(By.id("email")).sendKeys("testuser1@gmail.com"); 	 
-	    driver.findElement(By.id("passwd")).sendKeys("Test@123");
-	    driver.findElement(By.id("SubmitLogin")).click();
+		driver.findElement(By.id("email")).sendKeys("testuser1@gmail.com");
+		driver.findElement(By.id("SubmitCreate")).click();
+	}
+	@And("^user clicks \"create an account button\" $")
+	public void user_enters_UserName_and_Password() throws Throwable {
+		driver.findElement(By.id("SubmitCreate")).click();
 		}
+		
+	@And("^user enters the following details$")
+	public static void create_Registration()  throws Throwable {
+	}
 
-	@Then("^Message displayed Login Successfully$")
+	@And("^user clicks \"register button\" $")
+	public void user_enters_UserName_and_Password() throws Throwable {
+		driver.findElement(By.id("SubmitAccount")).click();
+	}
+
+	@Then("^message displayed Registration Successful$")
 	public void message_displayed_Login_Successfully() throws Throwable {
-		System.out.println("Login Successfully");
-	}
-
-	@When("^User LogOut from the Application$")
-	public void user_LogOut_from_the_Application() throws Throwable {
-		driver.findElement (By.xpath(".//*[@id='account_logout']/a")).click();
-	}
-
-	@Then("^Message displayed Logout Successfully$")
-	public void message_displayed_Logout_Successfully() throws Throwable {
-        System.out.println("LogOut Successfully");
+		System.out.println("Registration Succesful");
 	}
 
 }
