@@ -1,4 +1,4 @@
-package com.DemoAutomation.pages;
+package com.AutomationPractice.pages;
 
 import java.util.concurrent.TimeUnit;
 
@@ -7,10 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
-import com.oracle.util.WebDriverCommonLib;
-import com.oracle.pageObjects.oracle_PageObjects;
 
-//Created by Roshani Angadi on 12/11/2020
 
 public class Registration extends WebDriverCommonLib {
 
