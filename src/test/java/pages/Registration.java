@@ -1,4 +1,4 @@
-package com.AutomationPractice.pages;
+package pages;
 
 import java.util.concurrent.TimeUnit;
 
